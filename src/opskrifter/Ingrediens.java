@@ -26,6 +26,11 @@ public class Ingrediens implements KalorieBeregner {
         }
     }
 
+    @Override
+    public int kalorieriAlt() {
+        return kalorier;
+    }
+
     public String getNavn() {
         return navn;
     }
@@ -42,10 +47,12 @@ public class Ingrediens implements KalorieBeregner {
         this.kalorier = kalorier;
     }
 
+    public Diet getDiet() {
+        return diet;
+    }
 
-    @Override
-    public int kalorieriAlt() {
-        return kalorier;
+    public void setDiet(Diet diet) {
+        this.diet = diet;
     }
 }
 

@@ -43,6 +43,13 @@ public class SimpelTest {
         if (!teOpskrift.getIngredienser().get(2).rigPaaKalorier()) { resultat = " ikke";}
         System.out.println("Citron er" + resultat + " rig på kalorier.");
 
+        System.out.println("***********************");
+        System.out.println("*** Ingredienssøgning **");
+        System.out.println("***********************");
+        System.out.println("Te indeholder kød: " + teOpskrift.indeholderDiet(Diet.KØD));
+        System.out.println("Te indeholder sukker: " + teOpskrift.indeholderDiet(Diet.SUKKER));
+        blankLinje();
+
     }
 
     private static void opretOpskrifter() {
@@ -62,6 +69,9 @@ public class SimpelTest {
         teOpskrift.addIngrediens("Vand", 0);
         Ingrediens citron = new IngrediensMedNaeringsdetaljer("Citron", 10, 10, 5, 10);
         teOpskrift.addIngrediens(citron);
+        Ingrediens sukker = new IngrediensMedNaeringsdetaljer("Sukker", 100, 0,0,0);
+        sukker.setDiet(Diet.SUKKER);
+        teOpskrift.addIngrediens(sukker);
         blankLinje();
 
     }

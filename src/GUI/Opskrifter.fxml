@@ -19,5 +19,6 @@
       </Label>
       <TextArea fx:id="fremgangsmaadeTextArea" layoutX="326.0" layoutY="134.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
       <Button fx:id="indlaesButton" layoutX="426.0" layoutY="351.0" mnemonicParsing="false" onAction="#indlaesNaeste" text="Indlæs opskrift" />
+      <Button fx:id="gemButton" layoutX="531.0" layoutY="351.0" mnemonicParsing="false" onAction="#gemOpskrift" text="Gem" />
    </children>
 </AnchorPane>

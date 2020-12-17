@@ -52,7 +52,7 @@ public class Opskrift implements KalorieBeregner {
 
     public void visFremgangsmaade() {
         System.out.println("Opskriften for " + navn.toLowerCase() + ": ");
-        System.out.println("- " +fremgangsmaade);
+        System.out.println("- " + fremgangsmaade);
     }
 
     // EKSEMPEL på metodekald
@@ -87,6 +87,17 @@ public class Opskrift implements KalorieBeregner {
             ingredienserFormatteret += (" - " + ingrediens.getNavn() + "\n");
         }
         return ingredienserFormatteret;
+    }
+
+    // Eksempel på søgealgoritme
+    public boolean indeholderDiet(Diet diet) {
+        boolean svar = false;
+        for (Ingrediens ingrediens : ingredienser) {
+            if (ingrediens.getDiet() != null) {
+                if (ingrediens.getDiet().equals(diet)) {svar = true;}
+            }
+        }
+        return svar;
     }
 
     public String getNavn() {

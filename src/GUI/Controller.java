@@ -9,6 +9,10 @@ import opskrifter.Ingrediens;
 import opskrifter.IngrediensMedNaeringsdetaljer;
 import opskrifter.Opskrift;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Controller {
 
     @FXML
@@ -39,4 +43,19 @@ public class Controller {
 
     }
 
+    public void gemOpskrift(ActionEvent actionEvent) {
+        String ingredienser = ingredienserTextArea.getText();
+        String fremgangsmaade = fremgangsmaadeTextArea.getText();
+        File file = new File("opskrift.txt");
+        try {
+            FileWriter fileWriter = new FileWriter(file, true);
+            fileWriter.append("Opskrift \n");
+            fileWriter.append(ingredienser + "\n");
+            fileWriter.append(fremgangsmaade+ "\n----------------------\n");
+            fileWriter.close();
+        } catch (IOException e) {
+            System.out.println("Filen opskrift.txt kan ikke åbnes.");
+            e.printStackTrace();
+        }
+    }
 }

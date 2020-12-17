@@ -7,6 +7,5 @@ package opskrifter; /**
 
 // EKSEMPEL på enum
 public enum Diet {
-    VEGETAR, VEGANER, PESCETAR, OVO_LAKTO, KOSHER, HALAL
-
+    GLUTEN, SUKKER, KØD
     }
