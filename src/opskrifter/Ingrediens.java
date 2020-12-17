@@ -5,6 +5,7 @@ package opskrifter; /**
  * 11/12/2020
  */
 
+// EKSEMPEL på nedarvning
 public class Ingrediens implements KalorieBeregner {
     private String navn;
     private int kalorier;
@@ -16,6 +17,7 @@ public class Ingrediens implements KalorieBeregner {
         System.out.println("opskrifter.Ingrediens er oprettet: " + navn);
     }
 
+    // EKSEMPEL på if sætning
     public boolean rigPaaKalorier() {
         if (kalorier>100) {
             return true;

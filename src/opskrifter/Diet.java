@@ -5,7 +5,7 @@ package opskrifter; /**
  * 11/12/2020
  */
 
-/* Eksempel på enum */
+// EKSEMPEL på enum
 public enum Diet {
     VEGETAR, VEGANER, PESCETAR, OVO_LAKTO, KOSHER, HALAL
 

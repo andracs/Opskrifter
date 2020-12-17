@@ -1,9 +1,11 @@
-package opskrifter; /**
+/**
  * Developed by András Ács (acsandras@gmail.com)
  * Zealand / www.zealand.dk
  * Licensed under the MIT License
  * 11/12/2020
  */
+
+package opskrifter;
 
 import java.util.ArrayList;
 
@@ -15,10 +17,12 @@ public class Opskrift implements KalorieBeregner {
     private int tilberedningstid;
     private ArrayList<Ingrediens> ingredienser = new ArrayList<>();
 
+    // EKSEMPEL på noarg constructor
     public Opskrift() {
         System.out.println("opskrifter.Opskrift er oprettet: Uden navn ");
     }
 
+    // EKSEMPEL på overloaded constructor
     public Opskrift(String navn, String fremgangsmaade, int tilberedningstid, int antalPortioner) {
         this.navn = navn;
         this.fremgangsmaade = fremgangsmaade;
@@ -27,15 +31,18 @@ public class Opskrift implements KalorieBeregner {
         System.out.println("opskrifter.Opskrift er oprettet: " + navn );
     }
 
+    // EKSEMPEL på metode
     public void addIngrediens(Ingrediens ingrediens) {
         ingredienser.add(ingrediens);
     }
 
+    // EKSEMPEL på metode overloading
     public void addIngrediens(String navn, int kalorier) {
         Ingrediens ingrediens = new Ingrediens(navn, kalorier);
         ingredienser.add(ingrediens);
     }
 
+    // EKSEMPEL på et foreach loop
     public void visIngredienser() {
         System.out.println("Du skal til " + navn.toLowerCase() + " bruge:");
         for (Ingrediens ingrediens : ingredienser) {
@@ -48,12 +55,14 @@ public class Opskrift implements KalorieBeregner {
         System.out.println("- " +fremgangsmaade);
     }
 
+    // EKSEMPEL på metodekald
     void visOpskrift() {
         visIngredienser();
         visFremgangsmaade();
         System.out.println("Opskriften indeholder "  + kalorieriAlt() + " kalorier i alt, og " + kalorierPerPortion() + " per portion.");
     }
 
+    // EKSEMPEL på et for i loop
     public int kalorieriAlt() {
         int kalorier = 0;
         for (int i = 0; i < ingredienser.size(); i++) {
@@ -65,7 +74,7 @@ public class Opskrift implements KalorieBeregner {
     int kalorierPerPortion() {
         int kalorierIAlt = kalorieriAlt();
         int kalorierPerPortion = 0;
-        try {kalorierPerPortion = kalorierIAlt / antalPortioner; }
+        try {kalorierPerPortion = kalorierIAlt / antalPortioner; } // EKSEMPEL på en try / catch exception
         catch (Exception e) {
             System.out.println("FEJL - opskriften " + navn + " må ikke have 0 portioner!" +e);
         }

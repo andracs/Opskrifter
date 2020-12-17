@@ -13,7 +13,7 @@ public class SimpelTest {
     public static void main(String[] args) {
 
         blankLinje();
-        System.out.println("Velkommen til min opskrifts-applikations-dummy");
+        System.out.println("Velkommen til min opskrifts-applikations-dummy"); // EKSEMPEL på sout
         blankLinje();
 
         System.out.println("***********************");
@@ -68,6 +68,6 @@ public class SimpelTest {
 
     static void blankLinje() {
         System.out.println();
-    }
+    } // EKSEMPEL på en emegt simpel metode
 
 }

@@ -5,6 +5,7 @@ package opskrifter; /**
  * 11/12/2020
  */
 
+// EKSEMPEL på interface
 public interface KalorieBeregner {
     int kalorieriAlt();
 }
